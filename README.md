@@ -45,7 +45,9 @@ Creates a short URL for the given long URL.
 {
   "url": "https://example.com/very/long/path"
 }
+```
 Successful Response:
+```json
 {
   "short_url": "http://127.0.0.1:8000/shrt/kr1fFJ/"
 }
@@ -53,7 +55,7 @@ Successful Response:
 
 ### `GET /shrt/<short_code>/` – Expand a short URL
 
-Example request: GET /shrt/kr1fFJ/
+Example request: GET http://127.0.0.1:8000/shrt/kr1fFJ/
 
 Successful Response:
 ```json
