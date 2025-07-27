@@ -17,7 +17,7 @@ Simple URL shortener API built with Django REST Framework.
 ### 1. Clone the repository:
 ```bash
 git clone https://github.com/Ezg0t/simple-URL-shortener
-cd url-shortener
+cd simple-url-shortener
 ```
 ### 2. Create and activate a virtual environment:
 ```bash
