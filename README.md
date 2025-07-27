@@ -15,7 +15,7 @@ Simple URL shortener API built with Django REST Framework.
 ## 🚀 Quickstart
 
 ### 1. Clone the repository:
-
+```bash
 git clone https://github.com/Ezg0t/simple-URL-shortener
 cd url-shortener
 
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 python manage.py migrate
 python manage.py runserver
-
+```
 ## 📚 API Endpoints
 
 ### `POST /shorten/` – Shorten a long URL
