@@ -3,8 +3,8 @@ import random
 import string
 
 class URL(models.Model):
-    url: str = models.URLField(max_length=500)
-    short_code: str = models.CharField(max_length=6, unique=True, blank=True)
+    url = models.URLField(max_length=500)
+    short_code = models.CharField(max_length=6, unique=True, blank=True)
 
     def save(self, *args, **kwargs) -> None:
         if not self.short_code:
