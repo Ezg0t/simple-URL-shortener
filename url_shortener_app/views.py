@@ -13,7 +13,7 @@ class ShortenURLView(generics.CreateAPIView):
 class ExpandURLView(APIView):
     def get(self, request, short_code: str) -> Response:
         try:
-            short_url = URL.objects.get(short_code=short_code)
+            short_url: str = URL.objects.get(short_code=short_code)
             return Response({"url": short_url.url})
         except URL.DoesNotExist:
             return Response({"error": "URL not found"}, status=status.HTTP_404_NOT_FOUND)
