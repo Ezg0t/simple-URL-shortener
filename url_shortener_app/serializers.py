@@ -14,7 +14,7 @@ class URLSerializer(serializers.ModelSerializer):
     }
         
     def create(self, validated_data):
-        existing: URL = URL.objects.filter(url=validated_data['url']).first()
+        existing: Optional[URL] = URL.objects.filter(url=validated_data['url']).first()
         if existing:
             return existing
         return super().create(validated_data)
