@@ -4,14 +4,14 @@ from rest_framework.views import APIView
 from rest_framework import status
 from .models import URL
 from .serializers import URLSerializer
-from typing import Any
+from rest_framework.response import Response
 
 class ShortenURLView(generics.CreateAPIView):
     queryset = URL.objects.all()
     serializer_class = URLSerializer
 
 class ExpandURLView(APIView):
-    def get(self, request, short_code: str) -> Any:
+    def get(self, request, short_code: str) -> Response:
         try:
             short_url = URL.objects.get(short_code=short_code)
             return Response({"url": short_url.url})
